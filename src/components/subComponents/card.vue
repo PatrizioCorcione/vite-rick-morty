@@ -50,10 +50,11 @@ export default {
       transform: scale(1.1);
       transition: 0.8s;
       border: 8px solid #a7d3e9;
-    box-shadow: 0px 0px 28px black;
+      box-shadow: 0px 0px 28px black;
     }
   }
   .txt-character{
+    font-weight: bold;
     border: 5px solid #e2e182;
     box-shadow: 0px 0px 8px black;
     border-radius: 30px;
