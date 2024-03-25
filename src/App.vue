@@ -1,5 +1,6 @@
 <script>
-import {store} from 'store.js';
+import axios from 'axios';
+import {store} from './store.js';
 import Header from "../src/components/Header.vue";
 import Main from "../src/components/Main.vue";
 import Footer from "../src/components/Footer.vue";
@@ -9,11 +10,26 @@ export default{
     Header,
     Main,
     Footer,
+    
   },
   data() {
     return {
       store,
+
     }
+  },
+  methods: {
+    getApi(){
+      axios.get(this.store.apiUrl)
+    .then(result => {
+      this.store.characters = result.data.results;
+    })
+    },
+  },
+  
+  mounted() {
+    this.getApi();
+    
   },
 }
 </script>
