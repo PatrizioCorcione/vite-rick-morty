@@ -20,7 +20,7 @@ export default {
 
 <template>
 
-  <div>
+  <div class="col">
     <div>
       <img :src="imageP" :alt='nameP'>
       <div>
@@ -36,5 +36,14 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../../assets/scss/main.scss';
+@import '../../assets/scss/partials/general';
+.col{
+      background-color: red;
+      img{
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
 
 </style>

@@ -17,7 +17,7 @@ export default {
   
   <div class="container">
     <div class="row row-cols-4 ">
-      <card class="col rounded-3 "
+      <card
       v-for="character in this.store.characters"
       :key="character.id"
       :nameP="character.name"
@@ -36,6 +36,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
+.container{
+  
+  .row{
+    
+  }
+}
 
 
 </style>
