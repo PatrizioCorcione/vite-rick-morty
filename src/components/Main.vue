@@ -24,6 +24,7 @@ export default {
       :statusP="character.status"
       :imageP="character.image"
       :speciesP="character.species"
+      
       />
     </div>
   </div>

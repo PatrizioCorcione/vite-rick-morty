@@ -37,10 +37,12 @@ export default{
 <template>
 
   
-
+<body>
   <Header/>
   <Main/>
   <Footer/>
+</body>
+ 
 
   
   
@@ -49,5 +51,10 @@ export default{
 <style lang="scss">
 
 @import './assets/scss/main.scss';
+body{
+  background-image: url(../src/assets/img/10.webp);
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 </style>

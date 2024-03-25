@@ -27,7 +27,9 @@ export default {
         <h5>{{nameP}}</h5>
         <p>{{speciesP}}</p>
         <p>{{statusP}}</p>
+        
       </div>
+      <div class="fake-hr"></div>
     </div>
   </div>
   
@@ -42,18 +44,19 @@ export default {
   
   text-align: center;
   img{
-    border: 5px solid #a7d3e9;
-    box-shadow: 0px 0px 25px black;
+    border: 5px solid #0082b1;
+    box-shadow: 0px 0px 25px rgb(42, 180, 255);
     border-radius: 50%;
     overflow: hidden;
     &:hover{
       transform: scale(1.1);
       transition: 0.8s;
       border: 8px solid #a7d3e9;
-      box-shadow: 0px 0px 28px black;
+      box-shadow: 0px 0px 28px rgb(162, 236, 255);
     }
   }
   .txt-character{
+    background-color: #a7d3e9;
     font-weight: bold;
     border: 5px solid #e2e182;
     box-shadow: 0px 0px 8px black;
@@ -65,7 +68,14 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   }
+  .fake-hr{
+        width: 110%;
+        height: 5px;
+        background-color: rgb(197, 232, 0);
+        margin: 20px 0px;
+      }
 }
 
 </style>

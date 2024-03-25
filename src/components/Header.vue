@@ -34,7 +34,9 @@ export default {
 div{
   margin: 20px;
   h1{
+    color: #f5631a;
     font-size: 50px;
+    text-shadow: #ddf46d 0px 0px 5px;
   }
   input{
     margin: 10px;
