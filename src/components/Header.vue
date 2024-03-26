@@ -5,6 +5,7 @@ export default {
     return{
       store,
       
+      
     }
   }
 }
@@ -16,7 +17,11 @@ export default {
 
   <div  class="text-center">
     <h1>Rick & Morty</h1>
-    <input type="text" placeholder="Trova tra i personaggi">
+    <input
+    @keyup.enter="$emit('emitSearch')"
+     v-model="store.search"
+     type="text" placeholder="Trova tra i personaggi"
+     >
     <select name="" id="">
       <option value="">Per tipologia</option>
       <option value="">Luogo</option>
@@ -34,9 +39,10 @@ export default {
 div{
   margin: 20px;
   h1{
-    color: #f5631a;
-    font-size: 50px;
-    text-shadow: #ddf46d 0px 0px 5px;
+
+    color: #b23b00;
+    font-size: 5rem;
+    text-shadow: #ddf46d 0px 0px 10px;
   }
   input{
     margin: 10px;

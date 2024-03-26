@@ -20,9 +20,16 @@ export default{
   },
   methods: {
     getApi(){
-      axios.get(this.store.apiUrl)
+      this.store.characters=[]
+      axios.get(this.store.apiUrl,{
+        params:{
+          name: this.store.search,
+        }
+      
+      })
     .then(result => {
       this.store.characters = result.data.results;
+      console.log(this.store.characters);
     })
     },
   },
@@ -38,7 +45,7 @@ export default{
 
   
 <body>
-  <Header/>
+  <Header @emitSearch ="getApi"/>
   <Main/>
   <Footer/>
 </body>

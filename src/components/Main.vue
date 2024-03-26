@@ -16,8 +16,9 @@ export default {
 <template>
   
   <div class="container">
-    <div class="row row-cols-4 ">
+    <div v-if="store.characters.length > 0" class="row row-cols-4 ">
       <card
+      
       v-for="character in this.store.characters"
       :key="character.id"
       :nameP="character.name"
@@ -27,6 +28,7 @@ export default {
       
       />
     </div>
+    <p v-else> Nessun risultato</p>
   </div>
   
   
@@ -37,12 +39,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
-.container{
-  
-  .row{
-    
-  }
+p{
+  text-align: center;
+  font-size: 2rem;
+  color: #b23b00;
+  text-shadow: #ddf46d 0px 0px 10px;
 }
+
 
 
 </style>
