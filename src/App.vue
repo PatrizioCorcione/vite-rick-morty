@@ -33,8 +33,11 @@ export default{
       })
      .then(result => {
        this.store.characters = result.data.results;
-       this.getStatuses();
-       this.getSpecies();
+       if (this.store.species.length === 0) {
+        this.getSpecies();
+        this.getStatuses();
+       }
+       
        this.store.pageTot = result.data.info.pages;
        console.log(this.store.species);
       })
@@ -47,11 +50,6 @@ export default{
       });
     },
     getSpecies(){
-      // this.store.characters.forEach(element => {
-      //   if(!this.store.species.includes(element.species)){
-      //   this.store.species.push(element.species);
-      //   } 
-      // });
       for (let i = 0; i < 42; i++) {
         axios.get(store.apiUrl,{
           params:{

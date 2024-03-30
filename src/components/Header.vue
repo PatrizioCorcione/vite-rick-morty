@@ -9,6 +9,14 @@ export default {
 
   methods: {
 
+    resetAll(){
+      this.store.page=1;
+      this.store.search='';
+      this.store.specie='';
+      this.store.status='';
+      
+    }
+
 
     
   },
@@ -56,7 +64,9 @@ export default {
     store.page=1,
     $emit('emitSearch')"
     class="btn btn-primary ">Cerca</div>
-    <div class="btn btn-warning">Resetta</div>
+    <div
+    @click=" resetAll(),$emit('emitSearch')"
+    class="btn btn-warning">Resetta</div>
   </div>
   
   
