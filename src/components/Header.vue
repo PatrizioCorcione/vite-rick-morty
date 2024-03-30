@@ -4,9 +4,16 @@ export default {
   data(){
     return{
       store,
-      
-      
     }
+  },
+
+  methods: {
+
+
+    
+  },
+  mounted() {
+    
   }
 }
 
@@ -22,14 +29,36 @@ export default {
      v-model="store.search"
      type="text" placeholder="Trova tra i personaggi"
      >
-    <select name="" id="">
-      <option value="">Per tipologia</option>
-      <option value="">Luogo</option>
-      <option value="">Stato</option>
+    <select
+    v-model="store.status"
+    name="" id="">
+      <option value="" disabled selected>Filtra per stato</option>
+      <option
+      v-for="status in store.statuses"
+      :key="status"
+      :value="status">{{status}}
+      </option>
+      
     </select>
-    <div class="btn btn-primary ">Cerca</div>
+    <select
+    v-model="store.specie"
+    name="" id="">
+      <option value="" disabled selected>Filtra per specie</option>
+      <option
+      v-for="specie in store.species"
+      :key="specie"
+      :value="specie">{{specie}}
+      </option>
+      
+    </select>
+    <div
+    @click="
+    store.page=1,
+    $emit('emitSearch')"
+    class="btn btn-primary ">Cerca</div>
     <div class="btn btn-warning">Resetta</div>
   </div>
+  
   
 </template>
 
